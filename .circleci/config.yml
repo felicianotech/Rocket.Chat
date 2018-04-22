@@ -38,6 +38,7 @@ jobs:
       - run:
           name: Versions
           command: |
+            meteor npm install -g npm@latest
             npm --versions
             node -v
             meteor --version
@@ -50,7 +51,7 @@ jobs:
           command: |
             # rm -rf node_modules
             # rm -f package-lock.json
-            meteor npm install
+            meteor npm ci
 
 workflows:
   version: 2
